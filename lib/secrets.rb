@@ -2,7 +2,7 @@ require "secrets/version"
 
 module Secrets
   class Error < StandardError; end
-  def source(filename)
+  def self.source(filename)
     # Inspired by user takeccho at http://stackoverflow.com/a/26381374/3849157
     # Sources sh-script or env file and imports resulting environment
     fail(ArgumentError, "File #{filename} invalid or doesn't exist.") \
